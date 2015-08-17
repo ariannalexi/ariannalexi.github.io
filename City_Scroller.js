@@ -21,12 +21,12 @@ class building{
 	 g=color[1];
 	 b=color[2];
 	 }
-	 function drawBuilding();
+	 function drawBuilding(); // function to call to make the "buildings"
 	 {
 		 fill(r,g,b);
 		 rect(xPos,yPos,width,height); 
 }
-	void move(screenX,screenY) {
+	void move(screenX,screenY) { // to move the "buildings"
 		xPos = xPos + xSpeed
 	}
 }
@@ -37,7 +37,7 @@ class building{
  
  void setup()
  {
-	 size(screen.width,screen.height);
+	 size(600,800);
 	 background(0,51,102);
 	 for (var i=0; i<100; i++) 
 	{		var color = [190,190,190];// for the color of the back (gray)
@@ -68,18 +68,18 @@ class building{
 	{ background(0,51,102);
 		for(var x=0; x<back.length; x++){ // loop for drawing + moving rectangles for the back
 			{
-			back[x].drawbuilding(); // draw function for rectangles
-			back[x].move(); // move function for moving the back
+			back[].drawbuilding(); // draw function for rectangles
+			back[].move(); // move function for moving the back
 			}
 		 for(var x=0;x<middle.length;x++) // loop drawing + moving the middle rectangles
 		 {
-			 middle[x].drawBuilding();
-			 middle[x].move();
+			 middle[].drawBuilding();
+			 middle[].move();
 		 }
 		 for(var x=0;x<front.length;x++) // loop drawing + moving the front rectangles
 		 {
-			 front[x].drawBuilding();
-			 front[x].move();
+			 front[].drawBuilding();
+			 front[].move();
 		 }
 			}	
 	}
