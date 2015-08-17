@@ -21,7 +21,7 @@ class building{
 	 g=color[1];
 	 b=color[2];
 	 }
-	 function drawBuilding()
+	 function drawBuilding();
 	 {
 		 fill(r,g,b);
 		 rect(xPos,yPos,width,height); 
@@ -45,7 +45,7 @@ class building{
 			var height = random(0, -400); // creating a random height
 			var xp = random(0,1000); //x starting position
 			var yp = 600; //y starting position
-			back.push(new building(xp,yp,w,h,0.2,0,color); //making a new building with attributes
+			back[].push(new building(xp,yp,w,h,0.2,0,color);//making a new building with attributes
 			}
 		for var(i=0;i<100;i++) {
 			var color = [211,211,211];// for the color of the middle(light gray)
@@ -53,35 +53,35 @@ class building{
 			var height = random(0, -200); // creating a random height
 			var xp = random(0,1000); //x starting position
 			var yp = 600; //y starting position
-			middle.push(new building(xp,yp,w,h,0.7,0,color); //making a new building with attributes
+			middle[].push(new building(xp,yp,w,h,0.4,0,color); //making a new building with attributes
 		}
 		for var(i=0;i<100;i++) {
-		var color = [255,255,240]];// for the color of the front(ivory)
+			var color = [255,255,240]];// for the color of the front(ivory)
 			var width= random(30, 50); // creating a random width
 			var height = random(0, -100); // creating a random height
 			var xp = random(0,1000); //x starting position
 			var yp = 600; //y starting position
-			front.push(new building(xp,yp,w,h,0.4,0,color); //making a new building with attributes
+			front[].push(new building(xp,yp,w,h,0.6,0,color); //making a new building with attributes
 		}
  }
  void draw()
 	{ background(0,51,102);
 		for(var x=0; x<back.length; x++){ // loop for drawing + moving rectangles for the back
-			
 			{
-			back[].drawbuilding(); // draw function for rectangles
-			back[].move(); // move function for moving the back
+			back[x].drawbuilding(); // draw function for rectangles
+			back[x].move(); // move function for moving the back
 			}
 		 for(var x=0;x<middle.length;x++) // loop drawing + moving the middle rectangles
 		 {
-			 middle[].drawBuilding();
-			 middle[].move();
+			 middle[x].drawBuilding();
+			 middle[x].move();
 		 }
 		 for(var x=0;x<front.length;x++) // loop drawing + moving the front rectangles
 		 {
-			 front[].drawBuilding();
-			 front[].move();
+			 front[x].drawBuilding();
+			 front[x].move();
 		 }
 			}	
 	}
+	
  
