@@ -1,3 +1,32 @@
+void setup() {
+	 size(screen.width,screen.height);
+		background(0,51,102);
+	 for (var i=0; i<100; i++) 
+	{		var color = [190,190,190];// for the color of the back (gray)
+			var width= random(30, 50); // creating a random width
+			var height = random(0, -400); // creating a random height
+			var xp = random(0,1000); //x starting position
+			var yp = 600; //y starting position
+			back[].push(new building(xp,yp,w,h,0.2,0,color);//making a new building with attributes
+			}
+		for var(i=0;i<100;i++) {
+			var color = [211,211,211];// for the color of the middle(light gray)
+			var width= random(30, 50); // creating a random width
+			var height = random(0, -200); // creating a random height
+			var xp = random(0,1000); //x starting position
+			var yp = 600; //y starting position
+			middle[].push(new building(xp,yp,w,h,0.4,0,color); //making a new building with attributes
+		}
+		for var(i=0;i<100;i++) {
+			var color = [255,255,240];// for the color of the front(ivory)
+			var width= random(30, 50); // creating a random width
+			var height = random(0, -100); // creating a random height
+			var xp = random(0,1000); //x starting position
+			var yp = 600; //y starting position
+			front[].push(new building(xp,yp,w,h,0.6,0,color); //making a new building with attributes
+		}
+ }
+
 class building{
 	var xPos;
 	var yPos;
@@ -67,18 +96,18 @@ class building{
 	{ background(0,51,102);
 		for(var v=0; v<back.length; v++){ // loop for drawing + moving rectangles for the back
 			{
-			back[].drawbuilding(); // draw function for rectangles
-			back[].move(); // move function for moving the back
+			back[v].drawbuilding(); // draw function for rectangles
+			back[v].move(); // move function for moving the back
 			}
 		 for(var v=0;v<middle.length;v++) // loop drawing + moving the middle rectangles
 		 {
-			 middle[].drawBuilding();
-			 middle[].move();
+			 middle[v].drawBuilding();
+			 middle[v].move();
 		 }
 		 for(var v=0;v<front.length;v++) // loop drawing + moving the front rectangles
 		 {
-			 front[].drawBuilding();
-			 front[].move();
+			 front[v].drawBuilding();
+			 front[v].move();
 		 }
 			}	
 	}
