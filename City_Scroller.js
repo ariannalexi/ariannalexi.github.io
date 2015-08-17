@@ -21,13 +21,13 @@ class building{
 	 g=color[1];
 	 b=color[2];
 	 }
-	 function drawBuilding(); // function to call to make the "buildings"
+	 function drawBuilding() // function to call to make the "buildings"
 	 {
 		 fill(r,g,b);
 		 rect(xPos,yPos,width,height); 
 }
 	void move(screenX,screenY) { // to move the "buildings"
-		xPos = xPos + xSpeed
+		xPos = xPos + xSpeed;
 	}
 }
  //lists for each backdrop
@@ -35,10 +35,9 @@ class building{
  var middle= [];
  var front= [];
  
- void setup()
- {
-	 size(600,800);
-	 background(0,51,102);
+ void setup() {
+	 size(screen.width,screen.height);
+		background(0,51,102);
 	 for (var i=0; i<100; i++) 
 	{		var color = [190,190,190];// for the color of the back (gray)
 			var width= random(30, 50); // creating a random width
@@ -56,7 +55,7 @@ class building{
 			middle[].push(new building(xp,yp,w,h,0.4,0,color); //making a new building with attributes
 		}
 		for var(i=0;i<100;i++) {
-			var color = [255,255,240]];// for the color of the front(ivory)
+			var color = [255,255,240];// for the color of the front(ivory)
 			var width= random(30, 50); // creating a random width
 			var height = random(0, -100); // creating a random height
 			var xp = random(0,1000); //x starting position
@@ -66,17 +65,17 @@ class building{
  }
  void draw()
 	{ background(0,51,102);
-		for(var x=0; x<back.length; x++){ // loop for drawing + moving rectangles for the back
+		for(var v=0; v<back.length; v++){ // loop for drawing + moving rectangles for the back
 			{
 			back[].drawbuilding(); // draw function for rectangles
 			back[].move(); // move function for moving the back
 			}
-		 for(var x=0;x<middle.length;x++) // loop drawing + moving the middle rectangles
+		 for(var v=0;v<middle.length;v++) // loop drawing + moving the middle rectangles
 		 {
 			 middle[].drawBuilding();
 			 middle[].move();
 		 }
-		 for(var x=0;x<front.length;x++) // loop drawing + moving the front rectangles
+		 for(var v=0;v<front.length;v++) // loop drawing + moving the front rectangles
 		 {
 			 front[].drawBuilding();
 			 front[].move();
@@ -84,4 +83,3 @@ class building{
 			}	
 	}
 	
- 
