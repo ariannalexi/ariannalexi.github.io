@@ -31,32 +31,32 @@ class Building {
 var frontScroller = [];
 var middleScroller = [];
 var backScroller = [];
-var frontSpeed = 0.2;
-var middleSpeed = 0.4;
-var backSpeed =0.8;
+var frontSpeed = 10;
+var middleSpeed = 4;
+var backSpeed =6;
 
 void setup()
 {
 	size(1875,1000);
 	background(17,9,89);
 	var v=0;
-	for(i=0;i<frontScroller.length;i++){
+	for(i=0;i<100;i++){
 		var building3;
 		var bHeight= Math.floor((Math.random() *100 ) +200);
-		var bWidth = Math.floor((Math.random() *50 ) +20 );
-		var color=[210,100,10];
+		var bWidth = Math.floor((Math.random() *20 ) +50 );
+		var color=[0,255,0];
 		var x = v;
-		var y= 200 - bHeight; 
+		var y= 150 - bHeight; 
 		v = v + bWidth;
 		building3 = new Building(bWidth,bHeight, color, x, y);
 		frontScroller.push(building3);
 		}
 	var a=0;
-	for(i=0;i<middleScroller.length;i++){ 
+	for(i=0;i<100;i++){ 
 		var building2;
-		var bHeight= Math.floor((Math.random() *400 ) + 300);
+		var bHeight= Math.floor((Math.random() *350 ) + 300);
 		var bWidth = Math.floor((Math.random() *250 ) +100 );
-		var color=[3,100,230];
+		var color=[100,200,150];
 		var x = a;
 		var y= 600 - bHeight; 
 		a = a + bWidth;
@@ -67,7 +67,7 @@ void setup()
 	var r = 0;
 	for(var i=0;i<100;i++){
 		var building1;
-		var bHeight= Math.floor((Math.random() * 400) + 500);
+		var bHeight= Math.floor((Math.random() * 100) + 350);
 		var bWidth = Math.floor((Math.random() * 400) + 300);
 		var color=[185,185,185];
 		var x = r;
@@ -89,21 +89,21 @@ void draw(){
 	}
 
 	for(var i=0;i<backScroller.length;i++) { 
-		backScroller[i].move(0.6);
+		backScroller[i].move(6);
 	}
 	for(var i=0;i<middleScroller.length;i++) {
 		middleScroller[i].drawBuilding();
 	}
 	
 	for(var i=0;i<middleScroller.length;i++){
-		middleScroller[i].move(0.4); 
+		middleScroller[i].move(4);
 		}
 
 	for(var i=0;i<frontScroller.length;i++) {
 		frontScroller[i].drawBuilding();
 		}
 	for(var i=0;i<frontScroller.length;i++) {
-		frontScroller[i].move(0.2); 
+		frontScroller[i].move(10); 
 		}
 
 }
